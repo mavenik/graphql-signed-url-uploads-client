@@ -178,7 +178,7 @@ const FileUploadButton = () => {
 
   if(flash)
     flashMessage = (
-      <div className="alert alert-primary alert-dismissible" role="alert">
+      <div className="alert alert-primary" role="alert">
       {flash}
       </div>
     );
