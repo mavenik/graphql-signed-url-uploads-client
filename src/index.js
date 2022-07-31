@@ -111,7 +111,7 @@ const FileUploadButton = () => {
         // Restore hyphenated keys
         if(hyphenatedKeys[key])
         {
-          formData.append(hyphenatedKeys[key], presignedPostData.fields[key]);
+          if(presignedPostData.fields[key]) formData.append(hyphenatedKeys[key], presignedPostData.fields[key]);
         } else {
           formData.append(key, presignedPostData.fields[key]);
         }
