@@ -29,6 +29,7 @@ const PRESIGNED_UPLOAD_POST = gql`
             XAmzCredential
             Policy
             XAmzSignature
+            XAmzSecurityToken
           }
         }
       }
@@ -51,7 +52,8 @@ const hyphenatedKeys = {
   XAmzAlgorithm: 'X-Amz-Algorithm',
   XAmzDate: 'X-Amz-Date',
   XAmzCredential: 'X-Amz-Credential',
-  XAmzSignature: 'X-Amz-Signature'
+  XAmzSignature: 'X-Amz-Signature',
+  XAmzSecurityToken: 'X-Amz-Security-Token'
 }
 
 const getPresignedPostData = selectedFile => {
